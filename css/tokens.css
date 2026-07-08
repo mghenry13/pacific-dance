@@ -1,0 +1,63 @@
+/* ============================================================
+   Pacific Dance — Deck Design Tokens
+   Deck chrome dresses in Direction 1 (Coastal Minimal) —
+   the direction closest to the logo. Per-direction accents
+   are defined here for the four direction slides.
+   Logo hexes: #00244C · #0072AA · #00A8E5
+   ============================================================ */
+
+:root {
+  /* --- Core (from the logo — fixed constraints) --- */
+  --paper:  #FFFFFF; /* the ground */
+  --mist:   #F5F7FA; /* soft gray — alternating bands */
+  --navy:   #00244C; /* logo dark blue — type, dark panels */
+  --royal:  #0072AA; /* logo mid blue — links, secondary */
+  --sky:    #00A8E5; /* logo light blue — the accent */
+  --silver: #C7CED6; /* merch silver — dividers, details */
+
+  /* --- Direction-only accents (never deck chrome) --- */
+  --coral:  #FF6B5A; /* Direction 3 CTA accent */
+  --gold:   #FFB454; /* Direction 3 alt accent */
+
+  /* derived */
+  --slate:   #52667C;              /* quiet text on white */
+  --navy-90: rgba(0, 36, 76, .90);
+  --navy-65: rgba(0, 36, 76, .65);
+  --paper-70: rgba(255, 255, 255, .70);
+
+  /* --- Type --- */
+  /* Podkova ≈ the logo wordmark's letterforms (arch-top A, monoline slabs) */
+  --display: "Podkova", Georgia, serif;
+  --body: "Inter", system-ui, -apple-system, sans-serif;
+
+  /* --- Rhythm --- */
+  --page-x: clamp(1.25rem, 5vw, 6rem);
+  --maxw: 1280px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+body {
+  font-family: var(--body);
+  background: var(--paper);
+  color: var(--navy);
+  line-height: 1.55;
+  font-size: 18px;
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; }
+
+.display { font-family: var(--display); font-weight: 700; letter-spacing: -.005em; }
+
+/* small tracked label */
+.eyebrow {
+  font-family: var(--body);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.75rem;
+  color: var(--slate);
+}
