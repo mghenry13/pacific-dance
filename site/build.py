@@ -259,7 +259,7 @@ def enroll_page():
     <div>
       <div class="formcard" id="bookform">
         <h3 style="font-size:1.4rem">{CTA}</h3>
-        <form onsubmit="event.preventDefault(); document.getElementById('bookform').style.display='none'; document.getElementById('thanks').style.display='block';">
+        <form onsubmit="event.preventDefault(); window.location.href='thank-you.html';">
           <label>Student's name</label><input required placeholder="Dancer's first &amp; last name">
           <label>Parent / guardian name</label><input required placeholder="Your name">
           <label>Email</label><input type="email" required placeholder="you@email.com">
@@ -268,13 +268,6 @@ def enroll_page():
           <button class="btn btn-primary" type="submit">{CTA}</button>
           <p class="form-note">No card, no commitment — Lori follows up personally.</p>
         </form>
-      </div>
-      <div class="formcard thanks" id="thanks" style="display:none">
-        <img src="../assets/img/instr-lori.jpg" alt="Lori, co-owner of Pacific Dance">
-        <h3>You're in — talk soon!</h3>
-        <p>Hi, I'm Lori. I'll email you shortly to find the perfect class for your dancer. Want a head start? A few more details help me place them just right.</p>
-        <a class="btn btn-primary" style="margin-top:18px" href="#">Add more details (optional)</a>
-        <p class="form-note">Or just wait for my email — either works!</p>
       </div>
     </div>
   </div>
@@ -289,28 +282,24 @@ def enroll_page():
     </div>
     <div class="twocol">
       <div class="card-p">
-        <table class="fees">
-          <tr class="head"><td>Monthly tuition</td><td>Effective Jan 1, 2026</td></tr>
-          <tr><td>1 class per week</td><td>$95 / mo</td></tr>
-          <tr><td>2 classes per week</td><td>$180 / mo</td></tr>
-          <tr><td>3 classes per week</td><td>$230 / mo</td></tr>
-          <tr><td>4 classes per week</td><td>$280 / mo</td></tr>
-          <tr><td>5 classes per week</td><td>$310 / mo</td></tr>
-          <tr><td>6 classes per week</td><td>$335 / mo</td></tr>
-          <tr><td>7 classes per week</td><td>$360 / mo</td></tr>
-          <tr><td>8 classes per week</td><td>$385 / mo</td></tr>
-          <tr><td>Each additional class</td><td>+$25 / mo</td></tr>
-        </table>
+        <div class="feehead">Monthly tuition · effective Jan 1, 2026</div>
+        <p class="feeline"><b>1 class per week</b> — $95/mo</p>
+        <p class="feeline"><b>2 classes per week</b> — $180/mo</p>
+        <p class="feeline"><b>3 classes per week</b> — $230/mo</p>
+        <p class="feeline"><b>4 classes per week</b> — $280/mo</p>
+        <p class="feeline"><b>5 classes per week</b> — $310/mo</p>
+        <p class="feeline"><b>6 classes per week</b> — $335/mo</p>
+        <p class="feeline"><b>7 classes per week</b> — $360/mo</p>
+        <p class="feeline"><b>8 classes per week</b> — $385/mo</p>
+        <p class="feeline"><b>Each additional class</b> — +$25/mo</p>
       </div>
       <div class="card-p">
-        <table class="fees">
-          <tr class="head"><td>Other rates</td><td></td></tr>
-          <tr><td>Registration fee (annual)</td><td>$35</td></tr>
-          <tr><td>Single class</td><td>$35</td></tr>
-          <tr><td>Mommy &amp; Me card — 5 classes</td><td>$75</td></tr>
-          <tr><td>Teen/Adult card — 5 classes</td><td>$135</td></tr>
-          <tr><td>Teen/Adult card — 11 classes</td><td>$270</td></tr>
-        </table>
+        <div class="feehead">Other rates</div>
+        <p class="feeline"><b>Registration fee (annual)</b> — $35</p>
+        <p class="feeline"><b>Single class</b> — $35</p>
+        <p class="feeline"><b>Mommy &amp; Me card, 5 classes</b> — $75</p>
+        <p class="feeline"><b>Teen/Adult card, 5 classes</b> — $135</p>
+        <p class="feeline"><b>Teen/Adult card, 11 classes</b> — $270</p>
         <p style="margin-top:16px; font-size:.85rem; color:var(--slate)">Tuition runs on Auto Pay (charged around the 1st). Class cards expire 60 days from purchase. Performing Group &amp; competition fees are shared with current PG families on the <a href="performing-groups.html" style="color:var(--royal); font-weight:600">password-protected page</a>.</p>
       </div>
     </div>
@@ -337,6 +326,7 @@ def enroll_page():
 def about_page():
     instructors = json.load(open('/tmp/instructors.json'))
     cards = ""
+    bio_accs = ""
     for ins in instructors:
         name = ins['name'].split(' - ')[0]
         role = "Owner / Director" if "Owner" in ins['name'] else "Instructor"
@@ -348,7 +338,8 @@ def about_page():
             ph = f'<div class="mono">{initials}</div>'
         paras = ins['paras'] or ["Bio coming soon."]
         full = "".join(f"<p>{p}</p>" for p in paras[:3])
-        cards += f"""<div class="bio"><div class="ph">{ph}</div><div class="nm">{name}</div><div class="rl">{role}</div><details><summary>Read bio +</summary>{full}</details></div>\n"""
+        cards += f"""<div class="bio"><div class="ph">{ph}</div><div class="nm">{name}</div><div class="rl">{role}</div></div>\n"""
+        bio_accs += f'<details class="acc"><summary>{name}</summary><div class="inner">{full}</div></details>\n' 
     return head("About — Pacific Dance, Irvine", "Opened in 1985, family-run by Tim & Lori since 1994. Meet the instructors behind Irvine's home for dance.") + nav("about.html") + page_hero(
         "About Pacific Dance",
         "Four decades of dancers",
@@ -393,6 +384,9 @@ def about_page():
     </div>
     <div class="biogrid">
 {cards}    </div>
+    <div style="max-width:820px; margin:44px auto 0">
+      <div class="head-c" style="margin-bottom:24px"><h2 style="font-size:1.6rem">The full bios</h2></div>
+{bio_accs}    </div>
   </div>
 </section>
 """ + cta_band("Come meet us in person.", "The first class is free — and the viewing windows mean you see every minute of it.") + FOOTER
@@ -440,10 +434,9 @@ def pg_page():
       <h3>Current PG Families</h3>
       <p>Competition schedules, fees, and group logistics live behind this password — so current families always have them handy, and they stay off the public internet.</p>
       <div class="row">
-        <input placeholder="Family password" disabled>
-        <a class="btn" href="#">Enter</a>
+        <a class="btn" href="#">Enter the PG Family page →</a>
       </div>
-      <p style="font-size:.78rem; opacity:.7; margin-top:14px">Mock note: the gate is functional at launch (Squarespace password page). Password changes each season.</p>
+      <p style="font-size:.78rem; opacity:.7; margin-top:14px">Opens Squarespace's built-in password screen — the password changes each season.</p>
     </div>
   </div>
 </section>
@@ -637,6 +630,23 @@ def contact_page():
 def homepage():
     return open(os.path.join(HERE, '_home_src.html')).read()
 
+
+# ============================================================ THANK YOU
+def thankyou_page():
+    return head("You're in — Pacific Dance", "Thanks! Lori will follow up shortly to find the perfect class.") + nav("enroll.html") + """
+<section class="block" style="min-height:60vh; display:flex; align-items:center">
+  <div class="wrap" style="max-width:640px">
+    <div class="formcard thanks">
+      <img src="../assets/img/instr-lori.jpg" alt="Lori, co-owner of Pacific Dance">
+      <h3>You're in — talk soon!</h3>
+      <p>Hi, I'm Lori. I'll email you shortly to find the perfect class for your dancer. Want a head start? A few more details help me place them just right.</p>
+      <a class="btn btn-primary" style="margin-top:18px" href="#">Add more details (optional)</a>
+      <p class="form-note">Or just wait for my email — either works! <a href="index.html" style="color:var(--royal)">Back to the homepage</a></p>
+    </div>
+  </div>
+</section>
+""" + FOOTER
+
 PAGES = {
     'index.html': homepage,
     'classes.html': classes_page,
@@ -646,6 +656,7 @@ PAGES = {
     'recital.html': recital_page,
     'policies.html': policies_page,
     'contact.html': contact_page,
+    'thank-you.html': thankyou_page,
 }
 
 if __name__ == '__main__':

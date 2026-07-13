@@ -40,7 +40,7 @@
     <div>
       <div class="formcard" id="bookform">
         <h3 style="font-size:1.4rem">Book a Free Class</h3>
-        <form onsubmit="event.preventDefault(); document.getElementById('bookform').style.display='none'; document.getElementById('thanks').style.display='block';">
+        <form onsubmit="event.preventDefault(); window.location.href='thank-you.html';">
           <label>Student's name</label><input required placeholder="Dancer's first &amp; last name">
           <label>Parent / guardian name</label><input required placeholder="Your name">
           <label>Email</label><input type="email" required placeholder="you@email.com">
@@ -49,13 +49,6 @@
           <button class="btn btn-primary" type="submit">Book a Free Class</button>
           <p class="form-note">No card, no commitment — Lori follows up personally.</p>
         </form>
-      </div>
-      <div class="formcard thanks" id="thanks" style="display:none">
-        <img src="../assets/img/instr-lori.jpg" alt="Lori, co-owner of Pacific Dance">
-        <h3>You're in — talk soon!</h3>
-        <p>Hi, I'm Lori. I'll email you shortly to find the perfect class for your dancer. Want a head start? A few more details help me place them just right.</p>
-        <a class="btn btn-primary" style="margin-top:18px" href="#">Add more details (optional)</a>
-        <p class="form-note">Or just wait for my email — either works!</p>
       </div>
     </div>
   </div>
@@ -70,28 +63,24 @@
     </div>
     <div class="twocol">
       <div class="card-p">
-        <table class="fees">
-          <tr class="head"><td>Monthly tuition</td><td>Effective Jan 1, 2026</td></tr>
-          <tr><td>1 class per week</td><td>$95 / mo</td></tr>
-          <tr><td>2 classes per week</td><td>$180 / mo</td></tr>
-          <tr><td>3 classes per week</td><td>$230 / mo</td></tr>
-          <tr><td>4 classes per week</td><td>$280 / mo</td></tr>
-          <tr><td>5 classes per week</td><td>$310 / mo</td></tr>
-          <tr><td>6 classes per week</td><td>$335 / mo</td></tr>
-          <tr><td>7 classes per week</td><td>$360 / mo</td></tr>
-          <tr><td>8 classes per week</td><td>$385 / mo</td></tr>
-          <tr><td>Each additional class</td><td>+$25 / mo</td></tr>
-        </table>
+        <div class="feehead">Monthly tuition · effective Jan 1, 2026</div>
+        <p class="feeline"><b>1 class per week</b> — $95/mo</p>
+        <p class="feeline"><b>2 classes per week</b> — $180/mo</p>
+        <p class="feeline"><b>3 classes per week</b> — $230/mo</p>
+        <p class="feeline"><b>4 classes per week</b> — $280/mo</p>
+        <p class="feeline"><b>5 classes per week</b> — $310/mo</p>
+        <p class="feeline"><b>6 classes per week</b> — $335/mo</p>
+        <p class="feeline"><b>7 classes per week</b> — $360/mo</p>
+        <p class="feeline"><b>8 classes per week</b> — $385/mo</p>
+        <p class="feeline"><b>Each additional class</b> — +$25/mo</p>
       </div>
       <div class="card-p">
-        <table class="fees">
-          <tr class="head"><td>Other rates</td><td></td></tr>
-          <tr><td>Registration fee (annual)</td><td>$35</td></tr>
-          <tr><td>Single class</td><td>$35</td></tr>
-          <tr><td>Mommy &amp; Me card — 5 classes</td><td>$75</td></tr>
-          <tr><td>Teen/Adult card — 5 classes</td><td>$135</td></tr>
-          <tr><td>Teen/Adult card — 11 classes</td><td>$270</td></tr>
-        </table>
+        <div class="feehead">Other rates</div>
+        <p class="feeline"><b>Registration fee (annual)</b> — $35</p>
+        <p class="feeline"><b>Single class</b> — $35</p>
+        <p class="feeline"><b>Mommy &amp; Me card, 5 classes</b> — $75</p>
+        <p class="feeline"><b>Teen/Adult card, 5 classes</b> — $135</p>
+        <p class="feeline"><b>Teen/Adult card, 11 classes</b> — $270</p>
         <p style="margin-top:16px; font-size:.85rem; color:var(--slate)">Tuition runs on Auto Pay (charged around the 1st). Class cards expire 60 days from purchase. Performing Group &amp; competition fees are shared with current PG families on the <a href="performing-groups.html" style="color:var(--royal); font-weight:600">password-protected page</a>.</p>
       </div>
     </div>
