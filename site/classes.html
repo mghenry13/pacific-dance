@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Classes & Schedules — Pacific Dance, Irvine</title>
+<meta name="description" content="Dance classes for ages 2–92 in Irvine, CA. Filter the schedule by style, age, and day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400;500;600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css?v=1">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="index.html"><img src="../assets/img/pd-logo.jpg" alt="Pacific Dance"></a>
+    <ul><li><a href="classes.html" style="color:var(--royal)">Classes & Schedules</a></li><li><a href="about.html">About</a></li><li><a href="performing-groups.html">Performing Groups</a></li><li><a href="recital.html">Recital & Events</a></li><li><a href="policies.html">Policies & Info</a></li><li><a href="contact.html">Contact</a></li></ul>
+    <a class="btn btn-primary" href="enroll.html">Book a Free Class</a>
+  </div>
+</header>
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Classes & Schedules</div>
+    <h1>Find the right class</h1>
+    <p>Eight styles, every level, seven days a week — filter by style or day. Ages 2–92, all ability levels and interests welcome.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="fl-label">Style</div>
+    <div class="filters" id="f-style"><button class="chip-f on" data-f="all">All styles</button><button class="chip-f" data-f="combo">Combos (ages 2–7)</button><button class="chip-f" data-f="ballet">Ballet</button><button class="chip-f" data-f="jazz">Jazz</button><button class="chip-f" data-f="lyrical">Lyrical / Contemporary</button><button class="chip-f" data-f="tap">Tap</button><button class="chip-f" data-f="hiphop">Hip Hop</button><button class="chip-f" data-f="kpop">K-Pop</button><button class="chip-f" data-f="acro">Acro</button><button class="chip-f" data-f="technique">Technique</button><button class="chip-f" data-f="adult">Adult</button></div>
+    <div class="fl-label">Day</div>
+    <div class="filters" id="f-day"><button class="chip-f on" data-d="All days">All days</button><button class="chip-f" data-d="Mon">Mon</button><button class="chip-f" data-d="Tue">Tue</button><button class="chip-f" data-d="Wed">Wed</button><button class="chip-f" data-d="Thu">Thu</button><button class="chip-f" data-d="Fri">Fri</button><button class="chip-f" data-d="Sat">Sat</button><button class="chip-f" data-d="Sun">Sun</button></div>
+    <div class="sample-note"><b>Mock note:</b> this is a representative sample of the schedule (about a third of it). The launch version lists all 100+ classes from the July 2026 schedule — same filters, same layout.</div>
+    <table class="sched">
+      <thead><tr><th>Class</th><th>Ages</th><th>Days &amp; times</th></tr></thead>
+      <tbody id="schedbody">
+<tr data-style="combo" data-days="Sun"><td class="cls">Mommy & Me</td><td>18 mo – 3 yrs</td><td>Sun 9:00 AM</td></tr>
+<tr data-style="combo ballet tap" data-days="Fri Sat Sun Tue"><td class="cls">Ballet/Tap Combo</td><td>3–5</td><td>Tue 4:30 · Fri 3:30 · Sat 9:00 · Sat 10:00 · Sun 9:00</td></tr>
+<tr data-style="combo ballet lyrical" data-days="Sat Tue Wed"><td class="cls">Ballet/Lyrical Combo</td><td>4–6</td><td>Tue 4:30 · Wed 3:30 · Sat 10:00</td></tr>
+<tr data-style="combo jazz hiphop" data-days="Fri Mon"><td class="cls">Pre-Jazz Hop Tumble</td><td>4–6</td><td>Mon 4:30 · Fri 4:30</td></tr>
+<tr data-style="hiphop" data-days="Thu Wed"><td class="cls">Pre-Hip Hop</td><td>5–7</td><td>Wed 3:45 · Thu 4:00</td></tr>
+<tr data-style="ballet" data-days="Mon"><td class="cls">Pre-Ballet</td><td>5–7</td><td>Mon 3:45</td></tr>
+<tr data-style="ballet" data-days="Fri Mon Sat Wed"><td class="cls">Ballet I</td><td>6 & up</td><td>Mon 5:00 · Wed 4:30 · Fri 4:30 · Sat 10:00</td></tr>
+<tr data-style="ballet" data-days="Mon Sat Tue Wed"><td class="cls">Ballet II</td><td>by level</td><td>Mon 5:30 · Tue 5:30 · Wed 6:30 · Sat 10:00</td></tr>
+<tr data-style="ballet" data-days="Thu Tue"><td class="cls">Ballet III</td><td>by level</td><td>Tue 4:30 · Thu 6:30</td></tr>
+<tr data-style="ballet" data-days="Fri Wed"><td class="cls">Pre-Pointe</td><td>by level</td><td>Wed 5:30 · Fri 5:30</td></tr>
+<tr data-style="ballet adult" data-days="Thu"><td class="cls">Ballet — Beginning</td><td>Adult</td><td>Thu 8:30 PM</td></tr>
+<tr data-style="jazz" data-days="Sat Sun Tue"><td class="cls">Jazz I</td><td>6 & up</td><td>Tue 5:30 · Sat 9:00 · Sun 10:00</td></tr>
+<tr data-style="jazz lyrical" data-days="Thu Tue"><td class="cls">Jazz/Lyrical I</td><td>8 & up</td><td>Tue 3:30 · Thu 3:30</td></tr>
+<tr data-style="jazz" data-days="Mon"><td class="cls">Jazz/Musical Theatre II</td><td>by level</td><td>Mon 5:00</td></tr>
+<tr data-style="lyrical" data-days="Mon Wed"><td class="cls">Lyrical I</td><td>8 & up</td><td>Mon 5:30 · Wed 4:00</td></tr>
+<tr data-style="lyrical" data-days="Tue"><td class="cls">Lyrical — Advanced</td><td>by level</td><td>Tue 7:30</td></tr>
+<tr data-style="lyrical" data-days="Sat Tue"><td class="cls">Contemporary II</td><td>10 & up</td><td>Tue 6:30 · Sat 12:00</td></tr>
+<tr data-style="tap" data-days="Thu"><td class="cls">Tap I</td><td>6 & up</td><td>Thu 5:30</td></tr>
+<tr data-style="tap adult" data-days="Mon Wed"><td class="cls">Tap I</td><td>Teen/Adult</td><td>Mon 7:30 · Wed 1:00</td></tr>
+<tr data-style="technique" data-days="Sat Sun Thu Wed"><td class="cls">Turns & Technique I-B/II</td><td>by level</td><td>Wed 5:00 · Thu 4:30 · Sat 11:00 · Sun 12:00</td></tr>
+<tr data-style="hiphop" data-days="Thu Wed"><td class="cls">Hip Hop — Beginning</td><td>6 & up</td><td>Wed 4:30 · Wed 5:30 · Thu 6:00</td></tr>
+<tr data-style="hiphop" data-days="Mon Tue Wed"><td class="cls">Hip Hop — Beginning</td><td>10 & up</td><td>Mon 5:30 · Tue 5:30 · Wed 7:30</td></tr>
+<tr data-style="hiphop adult" data-days="Mon Wed"><td class="cls">Hip Hop — Beginning</td><td>Adult</td><td>Mon 6:30 · Wed 4:30</td></tr>
+<tr data-style="hiphop" data-days="Thu"><td class="cls">Hip Hop — Advanced</td><td>by level</td><td>Thu 7:00</td></tr>
+<tr data-style="kpop" data-days="Sat Thu Wed"><td class="cls">K-Pop — Beginning</td><td>6 & up</td><td>Wed 5:30 · Thu 4:30 · Sat 11:00</td></tr>
+<tr data-style="kpop" data-days="Fri Sat Thu Tue"><td class="cls">K-Pop — Beginning</td><td>10 & up</td><td>Tue 5:30 · Thu 7:30 · Fri 4:30 · Sat 1:00</td></tr>
+<tr data-style="kpop adult" data-days="Tue"><td class="cls">K-Pop — Beginning</td><td>Adult</td><td>Tue 8:30 PM</td></tr>
+<tr data-style="acro" data-days="Mon Sat Thu Tue Wed"><td class="cls">Acro for Dance — Beginning</td><td>7 & up</td><td>Mon 4:30 · Tue 5:30 · Wed 5:30 · Thu 5:30 · Sat 11:00</td></tr>
+<tr data-style="acro" data-days="Mon"><td class="cls">Acro for Dance — Advanced</td><td>12 & up</td><td>Mon 8:00</td></tr>
+<tr data-style="jazz" data-days="Sat"><td class="cls">Musical Theatre</td><td>7 & up</td><td>Sat 10:00</td></tr>
+<tr data-style="technique adult" data-days="Sat"><td class="cls">Stretch & Conditioning</td><td>10 – Adult</td><td>Sat 11:00</td></tr>
+<tr data-style="technique" data-days="Fri"><td class="cls">Pom</td><td>12 & up</td><td>Fri 5:30</td></tr>
+      </tbody>
+    </table>
+    <p id="noresults" style="display:none; text-align:center; color:var(--slate); padding:26px">No classes match those filters — try widening your search.</p>
+  </div>
+</section>
+
+<section class="block mist-bg">
+  <div class="wrap twocol">
+    <div class="card-p">
+      <h3>Make-up classes</h3>
+      <p style="margin-top:10px">Missed a class? Request a courtesy make-up in a comparable class — within one month of the absence, requested at least 48 hours ahead via the make-up form. Confirmation comes by email.</p>
+      <ul>
+        <li>You must be currently enrolled; make-ups are non-transferable</li>
+        <li>Not every class is open for make-ups (size, age &amp; level fit)</li>
+        <li>90-minute classes use two make-ups unless you're enrolled in one</li>
+      </ul>
+      <p style="margin-top:12px"><a href="policies.html" style="color:var(--royal); font-weight:600">Full make-up policy →</a></p>
+    </div>
+    <div class="card-p">
+      <h3>New classes</h3>
+      <p style="margin-top:10px">Recently added to the schedule:</p>
+      <ul>
+        <li><b>K-Pop for Beginners</b> — new sections for ages 6+, 8+, and 10+ across the week</li>
+        <li><b>Beginning Adult K-Pop</b> — Tuesdays 8:30 pm</li>
+      </ul>
+      <p style="margin-top:12px">New classes are announced here and in the studio each season.</p>
+    </div>
+  </div>
+</section>
+<section class="block dark finale">
+  <div class="wrap">
+    <h2>Not sure which class fits?</h2>
+    <p>Tell us your dancer's age and interests — Lori will point you to the right class, and the first one is free.</p>
+    <a class="btn" style="background:var(--sky); color:var(--navy)" href="enroll.html">Book a Free Class</a>
+    <small>Takes about a minute · Lori follows up personally</small>
+  </div>
+</section>
+<footer id="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <img class="logo-f" src="../assets/img/pd-logo.jpg" alt="Pacific Dance">
+        <p style="margin-top:16px; max-width:32ch">Pure joy in dance, confidence for life — opened in 1985, family-run by Tim &amp; Lori since 1994.</p>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li>4880 Irvine Boulevard, Suite 101</li>
+          <li>Irvine, CA 92620</li>
+          <li><a href="tel:+17147311108">714.731.1108</a></li>
+          <li><a href="mailto:info@pacificdance.net">info@pacificdance.net</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li>Mon–Thu · 12:30 – 9:00 pm</li>
+          <li>Fri · 12:30 – 8:00 pm</li>
+          <li>Sat · 9:00 am – 2:00 pm</li>
+          <li>Sun · 9:00 am – 1:00 pm</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="classes.html">Classes &amp; Schedules</a></li>
+          <li><a href="enroll.html">Book a Free Class</a></li>
+          <li><a href="performing-groups.html">Performing Groups</a></li>
+          <li><a href="recital.html">Recital &amp; Events</a></li>
+          <li><a href="policies.html">Policies &amp; Info</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">
+      <span>© 2026 Pacific Dance · Irvine, CA</span>
+      <span>Website mock — for review, not live</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+<script>
+(function () {
+  let style = 'all', day = 'All days';
+  const rows = Array.from(document.querySelectorAll('#schedbody tr'));
+  function apply() {
+    let shown = 0;
+    rows.forEach(r => {
+      const okS = style === 'all' || r.dataset.style.split(' ').includes(style);
+      const okD = day === 'All days' || r.dataset.days.split(' ').includes(day);
+      const on = okS && okD;
+      r.style.display = on ? '' : 'none';
+      if (on) shown++;
+    });
+    document.getElementById('noresults').style.display = shown ? 'none' : 'block';
+  }
+  document.querySelectorAll('#f-style .chip-f').forEach(b => b.addEventListener('click', () => {
+    style = b.dataset.f;
+    document.querySelectorAll('#f-style .chip-f').forEach(x => x.classList.toggle('on', x === b));
+    apply();
+  }));
+  document.querySelectorAll('#f-day .chip-f').forEach(b => b.addEventListener('click', () => {
+    day = b.dataset.d;
+    document.querySelectorAll('#f-day .chip-f').forEach(x => x.classList.toggle('on', x === b));
+    apply();
+  }));
+})();
+</script>
