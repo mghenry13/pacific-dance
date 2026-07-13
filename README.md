@@ -3,7 +3,7 @@
 A client-facing brand-reveal deck for **Pacific Dance** (Irvine, CA), prepared for Tim, Lori, and Ian.
 Built in the same format as the WildPath brand deck: a 16:9 HTML deck, keyboard-driven, print-to-PDF ready.
 
-**▶ View the deck:** https://mghenry13.github.io/pacific-dance-brand-guide/
+**▶ View the deck:** https://mghenry13.github.io/pacific-dance/
 
 Use the on-screen arrows, or `←` / `→` / `space`, to move through the slides. Press `F` for fullscreen.
 
