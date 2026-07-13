@@ -691,12 +691,81 @@ def landing_page():
   </div>
 </section>
 
+<div class="trust">
+  <div class="wrap row">
+    <div class="t"><b>1994</b><span>training dancers since</span></div>
+    <div class="t"><b>Studio of the Year</b><span>KAR Nationals 2026</span></div>
+    <div class="t"><b>10 studios</b><span>18,000 square feet</span></div>
+    <div class="t"><b>7 days</b><span>of classes, every week</span></div>
+    <div class="t"><b>2–92</b><span>ages, every level</span></div>
+  </div>
+</div>
+
+<section class="block">
+  <div class="wrap">
+    <div class="head-c">
+      <div class="eyebrow">The studio</div>
+      <h2>The largest studio in the area — built for families</h2>
+      <p>Ten studios in Irvine's Northwood Town Center, with viewing windows, a parent waiting area, and plenty of parking.</p>
+    </div>
+    <div class="facgrid">
+      <figure><img src="../assets/img/ba-ediface-after.jpg" alt="The Pacific Dance building"><figcaption>4880 Irvine Blvd — easy drop-off</figcaption></figure>
+      <figure><img src="../assets/img/ba-studio-after.jpg" alt="Inside one of ten studios"><figcaption>One of ten studios — raised floors, pro sound</figcaption></figure>
+      <figure><img src="../assets/img/ba-trophy-after.jpg" alt="The trophy wall"><figcaption>Four decades of hardware by the front desk</figcaption></figure>
+    </div>
+  </div>
+</section>
+
 <section class="block mist-bg">
+  <div class="wrap">
+    <div class="head-c" style="margin-bottom:30px">
+      <div class="eyebrow">In their words</div>
+      <h2>Irvine families keep saying the same thing</h2>
+    </div>
+    <div class="car" style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px">
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <blockquote>"Our family has been with Pacific Dance for the past 12 years… This studio is truly my daughter's second home and there's nowhere else we'd rather be."</blockquote>
+        <div class="who"><b>Heidi</b> · via Yelp</div>
+      </div>
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <blockquote>"We mainly started because my daughter was so shy… Performing in front of hundreds of people would've terrified me as a child, but she has embraced it."</blockquote>
+        <div class="who"><b>Jen</b> · via Yelp</div>
+      </div>
+      <div class="rev">
+        <div class="stars">★★★★★</div>
+        <blockquote>"All the teachers here are so welcoming and friendly… My child dances here and I also take adult ballet here and love it!"</blockquote>
+        <div class="who"><b>Daphne</b> · via Yelp</div>
+      </div>
+    </div>
+    <p style="text-align:center; margin-top:22px; font-size:.85rem; color:var(--slate)">4.5★ on Google · 59 reviews on Yelp</p>
+  </div>
+</section>
+
+<section class="block">
   <div class="wrap" style="max-width:820px">
     <div class="head-c" style="margin-bottom:24px"><h2 style="font-size:1.7rem">Quick answers</h2></div>
     <details class="acc" open><summary>Is it really free?</summary><div class="inner"><p>Yes — the first class is free, with no card and no commitment. Kids usually fall in love with the teacher; that's the whole plan.</p></div></details>
+    <details class="acc"><summary>What does it cost if we continue?</summary><div class="inner"><p>$35 registration, then simple monthly tuition from $95 for one class a week — the more classes, the less each costs. <a href="enroll.html" style="color:var(--royal); font-weight:600">Full tuition table →</a></p></div></details>
     <details class="acc"><summary>What ages do you take?</summary><div class="inner"><p>2 to 92. Mommy &amp; Me through adult classes, every ability level and interest.</p></div></details>
-    <details class="acc"><summary>When are classes?</summary><div class="inner"><p>Seven days a week, across eight styles — Lori will point you to the exact times that fit your schedule.</p></div></details>
+    <details class="acc"><summary>When are classes?</summary><div class="inner"><p>Seven days a week, across eight styles — Lori will point you to the exact times that fit your schedule. <a href="classes.html" style="color:var(--royal); font-weight:600">Browse the schedule →</a></p></div></details>
+    <details class="acc"><summary>Who teaches?</summary><div class="inner"><p>Working professionals from the Orange County and LA dance worlds, led by co-owner Lori Murphy (MFA in Dance, UC Irvine) — plus master classes from industry professionals. <a href="about.html" style="color:var(--royal); font-weight:600">Meet the instructors →</a></p></div></details>
+  </div>
+</section>
+
+<section class="block mist-bg">
+  <div class="wrap">
+    <div class="head-c" style="margin-bottom:30px">
+      <div class="eyebrow">Still browsing?</div>
+      <h2>Take the full tour</h2>
+    </div>
+    <div class="stygrid" style="grid-template-columns:repeat(4,1fr)">
+      <a class="sty" href="classes.html"><h3>Classes &amp; Schedules</h3><p>Eight styles, seven days a week — browse by style.</p></a>
+      <a class="sty" href="about.html"><h3>Meet the Studio</h3><p>Our story, the space, and all 22 instructors.</p></a>
+      <a class="sty" href="performing-groups.html"><h3>Performing Groups</h3><p>Competition teams, from Mini Mini to PD Elite.</p></a>
+      <a class="sty" href="index.html"><h3>Homepage</h3><p>The whole picture, starting from the top.</p></a>
+    </div>
   </div>
 </section>
 """ + cta_band("Ready when you are.", "One-minute form, free first class, and Lori takes it from there.") + FOOTER
