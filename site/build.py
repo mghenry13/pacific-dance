@@ -395,7 +395,7 @@ def about_page():
 def pg_page():
     return head("Performing Groups & Competition — Pacific Dance", "Audition-based performing groups from Mini Mini through PD Elite — competition teams with heart.") + nav("performing-groups.html") + page_hero(
         "Performing Groups & Competition",
-        "Serious training. Zero dog-eat-dog.",
+        "Serious training, with heart.",
         "Our audition-based Performing Groups compete across Southern California — and win a lot. But the focus is never on winning: it's kids doing their best, together.",
     ) + f"""
 <section class="block">
