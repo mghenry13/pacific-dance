@@ -29,7 +29,7 @@ def head(title, desc=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400;500;600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=3">
+<link rel="stylesheet" href="site.css?v=5">
 </head>
 <body>
 """
@@ -403,7 +403,7 @@ def about_page():
       <h2>Tour the studio</h2>
       <p>Ten studios, a glass observation hallway with a downtown-storefront feel, and a parent waiting area built for real life.</p>
     </div>
-    <div class="facgrid" style="grid-template-columns:repeat(2,1fr)">
+    <div class="facgrid cols2">
       <figure><img src="../assets/img/ba-studio-after.jpg" alt="Inside one of ten studios"><figcaption>One of ten studios — raised floors, pro sound</figcaption></figure>
       <figure><img src="../assets/img/bts-studio.jpg" alt="A photo shoot inside a Pacific Dance studio"><figcaption>Studios doubling as shoot spaces</figcaption></figure>
       <figure><img src="../assets/img/ba-ediface-after.jpg" alt="The Pacific Dance building"><figcaption>The Northwood Town Center storefront</figcaption></figure>
@@ -439,7 +439,7 @@ def pg_page():
       <div class="eyebrow">The groups</div>
       <h2>A team for every stage</h2>
     </div>
-    <div class="stygrid" style="grid-template-columns:repeat(4,1fr)">
+    <div class="stygrid">
       <div class="sty"><h3>Mini Mini PG</h3><p>The youngest performers get their first taste of the team — and the stage.</p><span class="age">Youngest dancers</span></div>
       <div class="sty"><h3>Hip Hop &amp; Tap PGs</h3><p>Style-specific crews for dancers who've found their lane.</p><span class="age">By audition</span></div>
       <div class="sty"><h3>Mini Ballet PG</h3><p>Classical foundations, performance polish.</p><span class="age">Ages 6 &amp; up</span></div>
@@ -504,7 +504,7 @@ def recital_page():
       <div class="eyebrow">Summer 2026</div>
       <h2>Workshops &amp; intensives</h2>
     </div>
-    <div class="twocol" style="grid-template-columns:1fr 1fr 1fr">
+    <div class="threecol">
       <div class="card-p">
         <h3>Summer Dance Party · Ages 4–6</h3>
         <ul style="margin-top:10px">
@@ -746,7 +746,7 @@ def landing_page():
       <div class="eyebrow">In their words</div>
       <h2>Irvine families keep saying the same thing</h2>
     </div>
-    <div class="car" style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px">
+    <div class="car">
       <div class="rev">
         <div class="stars">★★★★★</div>
         <blockquote>"Our family has been with Pacific Dance for the past 12 years… This studio is truly my daughter's second home and there's nowhere else we'd rather be."</blockquote>
@@ -784,7 +784,7 @@ def landing_page():
       <div class="eyebrow">Still browsing?</div>
       <h2>Take the full tour</h2>
     </div>
-    <div class="stygrid" style="grid-template-columns:repeat(4,1fr)">
+    <div class="stygrid">
       <a class="sty" href="classes.html"><h3>Classes &amp; Schedules</h3><p>Eight styles, seven days a week — browse by style.</p></a>
       <a class="sty" href="about.html"><h3>Meet the Studio</h3><p>Our story, the space, and all 22 instructors.</p></a>
       <a class="sty" href="performing-groups.html"><h3>Performing Groups</h3><p>Competition teams, from Mini Mini to PD Elite.</p></a>

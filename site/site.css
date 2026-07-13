@@ -90,7 +90,7 @@ section.block { padding: 92px 0; }
 .styles .allcta { text-align: center; margin-top: 40px; }
 
 /* ============================ reviews ============================ */
-.reviews .car { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.car { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
 .rev { background: #fff; border: 1px solid rgba(0,36,76,.1); border-radius: var(--radius);
   padding: 28px 26px 22px; display: flex; flex-direction: column; }
 .rev .stars { color: #F5B301; letter-spacing: 2px; font-size: .95rem; }
@@ -127,6 +127,7 @@ section.block { padding: 92px 0; }
 /* ============================ facility strip ============================ */
 .facility { background: var(--mist); }
 .facgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.facgrid.cols2 { grid-template-columns: repeat(2, 1fr); }
 .facgrid figure { border-radius: 0; }
 .facgrid img { width: 100%; aspect-ratio: 16/10.5; object-fit: cover; border-radius: var(--radius); }
 .facgrid figcaption { color: var(--slate); font-size: .8rem; padding-top: 8px; }
@@ -161,8 +162,8 @@ footer .fine { margin-top: 46px; padding-top: 22px; border-top: 1px solid rgba(2
   .nav ul { display: none; }
 }
 @media (max-width: 980px) {
-  .stygrid { grid-template-columns: repeat(2, 1fr); }
-  .reviews .car { grid-template-columns: 1fr; }
+  .stygrid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .car { grid-template-columns: 1fr; }
   .joy .grid, .every .grid, .people .grid, .recital .grid { grid-template-columns: 1fr; gap: 36px; }
   .facgrid { grid-template-columns: 1fr; }
   footer .cols { grid-template-columns: 1fr 1fr; }
@@ -260,6 +261,7 @@ details.acc .inner li { margin-bottom: 6px; }
 
 /* generic two-col content */
 .twocol { display: grid; grid-template-columns: 1fr 1fr; gap: 44px; align-items: start; }
+.threecol { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 24px; align-items: start; }
 .card-p { background: #fff; border: 1px solid rgba(0,36,76,.09); border-radius: var(--radius); padding: 26px; }
 .card-p h3 { font-size: 1.25rem; }
 .card-p p, .card-p li { font-size: .92rem; color: #24405e; }
@@ -272,6 +274,8 @@ details.acc .inner li { margin-bottom: 6px; }
 @media (max-width: 980px) {
   .biogrid { grid-template-columns: repeat(2, 1fr); }
   .twocol { grid-template-columns: 1fr; }
+  .threecol { grid-template-columns: 1fr; }
+  .facgrid.cols2 { grid-template-columns: 1fr; }
   .sched { display: block; overflow-x: auto; }
 }
 
