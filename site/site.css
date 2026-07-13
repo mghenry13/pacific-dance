@@ -301,3 +301,8 @@ details.acc .inner li { margin-bottom: 6px; }
   .twocol.form-first > div:first-child { order: 2; }
   .twocol.form-first > div:last-child { order: 1; }
 }
+
+/* style-card icons */
+.sty .ico { display: grid; place-items: center; width: 46px; height: 46px; border-radius: 12px;
+  background: rgba(0,168,229,.11); margin-bottom: 14px; }
+.sty .ico svg { width: 28px; height: 28px; }
