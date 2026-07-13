@@ -322,3 +322,6 @@ details.acc .inner li { margin-bottom: 6px; }
 .lori-promise img { width: 54px; height: 54px; border-radius: 50%; object-fit: cover; object-position: 50% 25%; flex-shrink: 0; }
 .lori-promise p { margin: 0; font-size: .86rem; line-height: 1.5; color: #24405e; }
 .lori-promise b { color: var(--navy); }
+
+/* anchor targets clear the sticky header */
+.acc { scroll-margin-top: 96px; }

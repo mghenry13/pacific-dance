@@ -29,7 +29,7 @@ def head(title, desc=""):
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Podkova:wght@400;500;600;700;800&family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="site.css?v=2">
+<link rel="stylesheet" href="site.css?v=3">
 </head>
 <body>
 """
@@ -204,11 +204,13 @@ def classes_page():
                     f'<span class="sages"> \u00b7 Ages {ages}</span></div>'
                     f'<div class="stimes">{tstr}</div></div>\n')
         return out
+    slugs = ["combo", "ballet", "jazz", "contemporary", "tap", "hip-hop",
+             "k-pop", "acro", "technique", "adult"]
     accs = ""
     for i, (title, sub, names) in enumerate(ACCORDION_GROUPS):
         adult_only = names == ["ADULT_ONLY"]
         subline = f'<p style="color:var(--slate); font-size:.88rem; margin-bottom:12px">{sub}</p>' if sub else ""
-        accs += (f'<details class="acc"{" open" if i == 0 else ""}><summary>{title}</summary>'
+        accs += (f'<details class="acc" id="{slugs[i]}"{" open" if i == 0 else ""}><summary>{title}</summary>'
                  f'<div class="inner">{subline}{rows_for(names, adult_only)}</div></details>\n')
     return head("Classes & Schedules \u2014 Pacific Dance, Irvine", "Dance classes for ages 2\u201392 in Irvine, CA \u2014 browse the schedule by style.") + nav("classes.html") + page_hero(
         "Classes & Schedules",
@@ -468,7 +470,7 @@ def pg_page():
       <h3>Current PG Families</h3>
       <p>Competition schedules, fees, and group logistics live behind this password — so current families always have them handy, and they stay off the public internet.</p>
       <div class="row">
-        <a class="btn" href="#">Enter the PG Family page →</a>
+        <a class="btn" href="pg-family.html">Enter the PG Family page →</a>
       </div>
       <p style="font-size:.78rem; opacity:.7; margin-top:14px">Opens Squarespace's built-in password screen — the password changes each season.</p>
     </div>
@@ -801,8 +803,28 @@ def thankyou_page():
       <img src="../assets/img/instr-lori.jpg" alt="Lori, co-owner of Pacific Dance">
       <h3>You're in — talk soon!</h3>
       <p>Hi, I'm Lori. I'll email you within two days — usually much sooner — to find the perfect class for your dancer. Want a head start? A few more details help me place them just right.</p>
-      <a class="btn btn-primary" style="margin-top:18px" href="#">Add more details (optional)</a>
+      <a class="btn btn-primary" style="margin-top:18px" href="contact.html#cform">Add more details (optional)</a>
       <p class="form-note">Or just wait for my email — either works! <a href="index.html" style="color:var(--royal)">Back to the homepage</a></p>
+    </div>
+  </div>
+</section>
+""" + FOOTER
+
+# ============================================================ PG FAMILY GATE (mock)
+def pgfamily_page():
+    return head("PG Families — Pacific Dance", "Password-protected page for current Performing Group families.") + nav("performing-groups.html") + """
+<section class="block" style="min-height:62vh; display:flex; align-items:center">
+  <div class="wrap" style="max-width:520px">
+    <div class="formcard" style="text-align:center">
+      <div style="font-size:2rem">🔒</div>
+      <h3 style="font-size:1.4rem; margin-top:10px">PG Families only</h3>
+      <p style="margin-top:10px; color:var(--slate); font-size:.95rem">This is a mock of Squarespace's built-in password screen. On the live site, current Performing Group families enter the seasonal password here to reach schedules, fees, and logistics.</p>
+      <form onsubmit="event.preventDefault(); this.querySelector('p.gate-msg').style.display='block';">
+        <label style="text-align:left">Password</label><input type="password" placeholder="Shared each season by the studio">
+        <button class="btn btn-primary" type="submit">Enter</button>
+        <p class="gate-msg" style="display:none; margin-top:12px; font-size:.85rem; color:var(--royal); font-weight:600">On the live site this unlocks the PG Family page.</p>
+      </form>
+      <p class="form-note" style="margin-top:14px"><a href="performing-groups.html" style="color:var(--royal)">← Back to Performing Groups</a></p>
     </div>
   </div>
 </section>
@@ -819,6 +841,7 @@ PAGES = {
     'contact.html': contact_page,
     'thank-you.html': thankyou_page,
     'free-class.html': landing_page,
+    'pg-family.html': pgfamily_page,
 }
 
 if __name__ == '__main__':
