@@ -168,7 +168,7 @@ ACCORDION_GROUPS = [
      ["Tap I"]),
     ("Hip Hop", "",
      ["Hip Hop \u2014 Beginning", "Hip Hop \u2014 Advanced"]),
-    ("K-Pop", "",
+    ("K-Pop", "Friday nights regularly draw 40+ dancers.",
      ["K-Pop \u2014 Beginning"]),
     ("Acro", "",
      ["Acro for Dance \u2014 Beginning", "Acro for Dance \u2014 Advanced"]),
@@ -316,6 +316,21 @@ def enroll_page():
     </div>
   </div>
 </section>
+
+<section class="block">
+  <div class="wrap" style="max-width:820px">
+    <div class="head-c">
+      <div class="eyebrow">Good to know</div>
+      <h2>What parents usually ask</h2>
+    </div>
+    <details class="acc" open><summary>How big are the classes?</summary><div class="inner"><p>Capped small on purpose — around 12 for our littlest dancers and about 15 for ages 4–6 — so every dancer gets individual corrections and is known by name.</p></div></details>
+    <details class="acc"><summary>What does it cost?</summary><div class="inner"><p>$35 registration, then monthly tuition from $95 for one class per week (see the tables above — more classes per week cost less each). Auto Pay, no statements, no surprises.</p></div></details>
+    <details class="acc"><summary>What if we miss a class?</summary><div class="inner"><p>You have 30 days to take a make-up in a comparable class — request it via the make-up form at least 48 hours ahead.</p></div></details>
+    <details class="acc"><summary>Can I watch my dancer's class?</summary><div class="inner"><p>Yes — viewing windows on the studios, and a comfortable parent waiting area where siblings do homework between classes.</p></div></details>
+    <details class="acc"><summary>Do you take beginners? Adults?</summary><div class="inner"><p>Always. Every ability level and interest, ages 2 to 92 — from first-ever classes to adult beginners who've meant to do this for years.</p></div></details>
+    <details class="acc"><summary>When can we start?</summary><div class="inner"><p>Anytime — classes run year-round and enrollment is always open. Book the free class and you're in this week.</p></div></details>
+  </div>
+</section>
 """ + cta_band("Questions before you book?", "Call or email — a real person answers, and it's usually Lori.") + FOOTER
 
 # ============================================================ ABOUT
@@ -351,8 +366,19 @@ def about_page():
     <div>
       <img src="../assets/img/ba-studio-after.jpg" alt="Inside one of Pacific Dance's ten studios" style="border-radius:10px">
       <div class="card-p" style="margin-top:16px">
-        <h3>Where our alumni went</h3>
-        <p style="margin-top:8px">Broadway · Cirque du Soleil · Disney · film &amp; TV · music videos · professional ballet and modern companies · cruise lines · NFL &amp; NBA dance teams · professional choreographers and teachers</p>
+        <h3>Where our dancers go</h3>
+        <p style="margin-top:8px">Many Pacific Dance students go on to lifelong careers in dance — teaching, performing professionally, and dancing on Broadway, in film &amp; TV, and with professional companies.</p>
+      </div>
+      <div class="card-p" style="margin-top:16px">
+        <h3>Recent recognition</h3>
+        <ul style="margin-top:8px">
+          <li><b>Studio of the Year 2026</b> — KAR Nationals</li>
+          <li>Primary Studio of Excellence 2026 — KAR Regionals</li>
+          <li>Outstanding Studio Award 2026 — Activ8</li>
+          <li>People's Choice nominee 2026 — Industry Dance Awards</li>
+          <li>Studio of Excellence 2025 — Energy Nationals</li>
+          <li>Scholarship winner &amp; Dancer of the Year finalist 2025 — Hollywood Vibe</li>
+        </ul>
       </div>
     </div>
   </div>
@@ -449,7 +475,7 @@ def recital_page():
       <div class="eyebrow">Summer 2026</div>
       <h2>Workshops &amp; intensives</h2>
     </div>
-    <div class="twocol">
+    <div class="twocol" style="grid-template-columns:1fr 1fr 1fr">
       <div class="card-p">
         <h3>Summer Dance Party · Ages 4–6</h3>
         <ul style="margin-top:10px">
@@ -464,6 +490,14 @@ def recital_page():
           <li>June 22–26 and August 3–7 · 9:00 am – 2:00 pm</li>
           <li>Full days of technique, styles, and performance</li>
           <li>$350 one week · deposits hold your spot</li>
+        </ul>
+      </div>
+      <div class="card-p">
+        <h3>December Open House</h3>
+        <ul style="margin-top:10px">
+          <li>An in-studio holiday performance for family &amp; friends</li>
+          <li>Every class can take part — a cozy first "stage" of the year</li>
+          <li>Gets dancers excited for recital season ahead</li>
         </ul>
       </div>
     </div>
