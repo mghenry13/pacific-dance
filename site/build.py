@@ -54,7 +54,7 @@ FOOTER = f"""<footer id="footer">
     <div class="cols">
       <div>
         <img class="logo-f" src="../assets/img/pd-logo.jpg" alt="Pacific Dance">
-        <p style="margin-top:16px; max-width:32ch">Pure joy in dance, confidence for life — opened in 1985, family-run by Tim &amp; Lori since 1994.</p>
+        <p style="margin-top:16px; max-width:32ch">Pure joy in dance, confidence for life — training dancers since 1994.</p>
       </div>
       <div>
         <h4>Visit</h4>
@@ -340,10 +340,10 @@ def about_page():
         full = "".join(f"<p>{p}</p>" for p in paras[:3])
         cards += f"""<div class="bio"><div class="ph">{ph}</div><div class="nm">{name}</div><div class="rl">{role}</div></div>\n"""
         bio_accs += f'<details class="acc"><summary>{name}</summary><div class="inner">{full}</div></details>\n' 
-    return head("About — Pacific Dance, Irvine", "Opened in 1985, family-run by Tim & Lori since 1994. Meet the instructors behind Irvine's home for dance.") + nav("about.html") + page_hero(
+    return head("About — Pacific Dance, Irvine", "Training dancers since 1994. Meet the instructors behind Irvine's home for dance.") + nav("about.html") + page_hero(
         "About Pacific Dance",
-        "Four decades of dancers",
-        "Opened in 1985 as the Irvine School of Dance — and family-run by Tim & Lori since 1994.",
+        "Training dancers since 1994",
+        "Family-run by Tim & Lori — in a studio that has been part of Irvine since 1985.",
     ) + f"""
 <section class="block">
   <div class="wrap twocol">
