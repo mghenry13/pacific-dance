@@ -40,7 +40,8 @@ def nav(active):
         f'<li><a href="{href}"{on if href == active else ""}>{label}</a></li>'
         for href, label in NAV_ITEMS[1:]
     )
-    return f"""<header>
+    return f"""<div class="annbar">Fall enrollment is open — the first class is free. <a href="enroll.html">Book now →</a></div>
+<header>
   <div class="wrap nav">
     <a class="logo" href="index.html"><img src="../assets/img/pd-logo.jpg" alt="Pacific Dance"></a>
     <ul>{items}</ul>
@@ -168,7 +169,7 @@ ACCORDION_GROUPS = [
      ["Tap I"]),
     ("Hip Hop", "",
      ["Hip Hop \u2014 Beginning", "Hip Hop \u2014 Advanced"]),
-    ("K-Pop", "Friday nights regularly draw 40+ dancers.",
+    ("K-Pop", 'Friday nights regularly draw 40+ dancers — <a href="https://www.instagram.com/pacificdance/" style="color:var(--royal); font-weight:600">see them on Instagram</a>.',
      ["K-Pop \u2014 Beginning"]),
     ("Acro", "",
      ["Acro for Dance \u2014 Beginning", "Acro for Dance \u2014 Advanced"]),
@@ -208,6 +209,7 @@ def classes_page():
   <div class="wrap" style="max-width:880px">
     <div class="sample-note"><b>Mock note:</b> a representative sample (about a third of the schedule). At launch, every style below lists all of its classes from the July 2026 schedule \u2014 and the studio can update times right in Squarespace, no code.</div>
     {accs}
+    <div class="pull-review" style="margin-top:26px">"All the teachers here are so welcoming and friendly… My child dances here and I also take adult ballet here and love it!"<span>— Daphne · via Yelp · parent &amp; adult student</span></div>
   </div>
 </section>
 
@@ -246,13 +248,13 @@ def enroll_page():
         "That's usually all it takes. Tell us a little about your dancer, and Lori will personally help you find the right class — no commitment, no card.",
     ) + f"""
 <section class="block">
-  <div class="wrap twocol">
+  <div class="wrap twocol form-first">
     <div>
       <div class="eyebrow">How it works</div>
       <h2 style="font-size:2rem; margin-top:10px">Three steps, one happy dancer</h2>
       <div style="margin-top:24px; display:flex; flex-direction:column; gap:18px">
         <div class="card-p"><h3>1 · Tell us about your dancer</h3><p style="margin-top:6px">The short form here — about a minute.</p></div>
-        <div class="card-p"><h3>2 · Lori finds the fit</h3><p style="margin-top:6px">She'll email you personally with the class that matches your dancer's age, level, and interests.</p></div>
+        <div class="card-p"><h3>2 · The right-class promise</h3><p style="margin-top:6px">Lori personally matches every dancer to the right class — age, level, and interest. It's the thing families thank us for most.</p></div>
         <div class="card-p"><h3>3 · Come dance — free</h3><p style="margin-top:6px">Try the class. If your dancer loves it (they usually do), we'll get them enrolled. Registration and the waiver happen after you've scheduled — not before.</p></div>
       </div>
     </div>
@@ -265,10 +267,12 @@ def enroll_page():
           <label>Email</label><input type="email" required placeholder="you@email.com">
           <label>Student's age</label><input required placeholder="e.g. 6">
           <label>Dance style interest</label><select>{styles_opts}</select>
+          <label>How did you hear about us? <span style="font-weight:400; color:var(--slate)">(optional)</span></label><select><option></option><option>Google</option><option>Instagram / Facebook</option><option>TikTok</option><option>A friend or family</option><option>Drove by the studio</option><option>Other</option></select>
           <button class="btn btn-primary" type="submit">{CTA}</button>
           <p class="form-note">No card, no commitment — Lori follows up personally.</p>
         </form>
       </div>
+      <div class="pull-review">"We mainly started because my daughter was so shy… Performing in front of hundreds of people would've terrified me as a child, but she has embraced it."<span>— Jen · via Yelp</span></div>
     </div>
   </div>
 </section>
@@ -352,7 +356,8 @@ def about_page():
       <h2 style="font-size:2.1rem; margin-top:10px">Joy first. Training always.</h2>
       <p style="margin-top:16px; color:#24405e">Lori started teaching at the Irvine School of Dance in 1985, and in 1994 she and Tim made it their own. Three decades later, Pacific Dance is the largest studio in the area — 18,000 square feet, ten studios with raised floors — and still runs like the family business it is.</p>
       <p style="margin-top:12px; color:#24405e">Our goal has never changed: professional training that's safe and individualized for every level of student, in a place kids genuinely love to be. Whether your dancer is training toward a professional track, keeping fit, or just having fun, they belong here — every ability level and interest, ages 2 to 92.</p>
-      <p style="margin-top:12px; color:#24405e">Our teachers come from professional backgrounds across ballet companies, film, TV, music videos, universities, and the stage — and we regularly host master classes from industry professionals.</p>
+      <p style="margin-top:12px; color:#24405e">Our teachers come from professional backgrounds across ballet companies, film, TV, music videos, universities, and the stage — and we regularly host master classes from industry professionals. Around Irvine, most families just call it "Pacific."</p>
+      <div class="pull-review" style="margin-top:20px">"I have been at Pacific Dance for almost all my life and it is like a second home to me… such a positive and happy environment."<span>— Kerry · via Yelp · PD dancer</span></div>
     </div>
     <div>
       <img src="../assets/img/ba-studio-after.jpg" alt="Inside one of Pacific Dance's ten studios" style="border-radius:10px">
@@ -372,6 +377,23 @@ def about_page():
         </ul>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="head-c">
+      <div class="eyebrow">The space</div>
+      <h2>Tour the studio</h2>
+      <p>Ten studios, a glass observation hallway with a downtown-storefront feel, and a parent waiting area built for real life.</p>
+    </div>
+    <div class="facgrid" style="grid-template-columns:repeat(2,1fr)">
+      <figure><img src="../assets/img/ba-studio-after.jpg" alt="Inside one of ten studios"><figcaption>One of ten studios — raised floors, pro sound</figcaption></figure>
+      <figure><img src="../assets/img/bts-studio.jpg" alt="A photo shoot inside a Pacific Dance studio"><figcaption>Studios doubling as shoot spaces</figcaption></figure>
+      <figure><img src="../assets/img/ba-ediface-after.jpg" alt="The Pacific Dance building"><figcaption>The Northwood Town Center storefront</figcaption></figure>
+      <figure><img src="../assets/img/ba-trophy-after.jpg" alt="The trophy wall"><figcaption>The trophy wall, by the front desk</figcaption></figure>
+    </div>
+    <div class="sample-note" style="margin-top:18px"><b>Mock note:</b> Tim's full studio shoot (all ten studios, the hallway, the observation windows) drops in here when it lands.</div>
   </div>
 </section>
 
@@ -424,6 +446,7 @@ def pg_page():
         <p style="margin-top:10px">Private dances are earned by commitment level — from one private for Mini Mini or Hip Hop-only dancers (with four weekly classes), up to unlimited privates for dancers committed to three or more groups. Full guidelines come with the application.</p>
       </div>
     </div>
+    <div class="pull-review" style="margin-top:30px">"The teachers are top notch, technique comes first… the focus is never on winning — it's about the kids doing their best and having fun."<span>— Becky · via Google</span></div>
   </div>
 </section>
 
@@ -631,6 +654,57 @@ def homepage():
     return open(os.path.join(HERE, '_home_src.html')).read()
 
 
+
+# ============================================================ FREE CLASS LANDING (Meta ads)
+def landing_page():
+    styles_opts = "".join(f"<option>{s}</option>" for s in
+        ["Not sure yet — help us pick", "Combo classes (ages 2–7)", "Ballet", "Jazz", "Lyrical / Contemporary", "Tap", "Hip Hop", "K-Pop", "Acro", "Musical Theatre", "Adult classes"])
+    return head("Free Dance Class in Irvine — Pacific Dance", "Ballet, jazz, hip hop, K-Pop & more for ages 2–92. The first class is free — no card, no commitment.") + nav("enroll.html") + f"""
+<section class="page-hero" style="padding-bottom:52px">
+  <div class="wrap">
+    <div class="eyebrow">Irvine · ages 2–92</div>
+    <h1>Your dancer's first class is free</h1>
+    <p>Ballet, jazz, hip hop, K-Pop and more — taught by working professionals at the largest studio in the area. No card, no commitment.</p>
+    <p style="margin-top:14px; color:var(--sky); font-weight:600; font-size:.95rem">★ 4.5 on Google · Irvine families since 1994</p>
+  </div>
+</section>
+
+<section class="block" style="padding-top:56px">
+  <div class="wrap twocol">
+    <div>
+      <div class="formcard" id="bookform">
+        <h3 style="font-size:1.4rem">{CTA}</h3>
+        <form onsubmit="event.preventDefault(); window.location.href='thank-you.html';">
+          <label>Student's name</label><input required placeholder="Dancer's first &amp; last name">
+          <label>Parent / guardian name</label><input required placeholder="Your name">
+          <label>Email</label><input type="email" required placeholder="you@email.com">
+          <label>Student's age</label><input required placeholder="e.g. 6">
+          <label>Dance style interest</label><select>{styles_opts}</select>
+          <label>How did you hear about us? <span style="font-weight:400; color:var(--slate)">(optional)</span></label><select><option></option><option>Google</option><option>Instagram / Facebook</option><option>TikTok</option><option>A friend or family</option><option>Drove by the studio</option><option>Other</option></select>
+          <button class="btn btn-primary" type="submit">{CTA}</button>
+          <p class="form-note">Takes about a minute — Lori follows up personally.</p>
+        </form>
+      </div>
+    </div>
+    <div>
+      <div class="card-p"><h3>Small classes, always</h3><p style="margin-top:6px">Capped at 12–15 dancers in the young groups — every kid is seen, corrected, and known by name.</p></div>
+      <div class="card-p" style="margin-top:14px"><h3>The right-class promise</h3><p style="margin-top:6px">Lori, our co-owner, personally matches every dancer to the right class by age, level, and interest.</p></div>
+      <div class="card-p" style="margin-top:14px"><h3>Watch every minute</h3><p style="margin-top:6px">Viewing windows on the studios and a comfortable parent waiting area — homework happens between classes.</p></div>
+      <div class="pull-review" style="margin-top:20px">"The focus is never on winning — it's about the kids doing their best and having fun."<span>— Becky · via Google</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="block mist-bg">
+  <div class="wrap" style="max-width:820px">
+    <div class="head-c" style="margin-bottom:24px"><h2 style="font-size:1.7rem">Quick answers</h2></div>
+    <details class="acc" open><summary>Is it really free?</summary><div class="inner"><p>Yes — the first class is free, with no card and no commitment. Kids usually fall in love with the teacher; that's the whole plan.</p></div></details>
+    <details class="acc"><summary>What ages do you take?</summary><div class="inner"><p>2 to 92. Mommy &amp; Me through adult classes, every ability level and interest.</p></div></details>
+    <details class="acc"><summary>When are classes?</summary><div class="inner"><p>Seven days a week, across eight styles — Lori will point you to the exact times that fit your schedule.</p></div></details>
+  </div>
+</section>
+""" + cta_band("Ready when you are.", "One-minute form, free first class, and Lori takes it from there.") + FOOTER
+
 # ============================================================ THANK YOU
 def thankyou_page():
     return head("You're in — Pacific Dance", "Thanks! Lori will follow up shortly to find the perfect class.") + nav("enroll.html") + """
@@ -657,6 +731,7 @@ PAGES = {
     'policies.html': policies_page,
     'contact.html': contact_page,
     'thank-you.html': thankyou_page,
+    'free-class.html': landing_page,
 }
 
 if __name__ == '__main__':
