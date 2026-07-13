@@ -273,3 +273,9 @@ details.acc .inner li { margin-bottom: 6px; }
 .srow { display: block; padding: 9px 2px; font-size: .93rem; }
 .srow .sages { color: var(--slate); font-size: .84rem; }
 .srow .stimes { display: block; color: var(--royal); font-weight: 600; font-size: .88rem; margin-top: 2px; }
+
+/* find us (homepage map) */
+.findus .grid { display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
+.findus .mapwrap { border-radius: var(--radius); overflow: hidden; border: 1px solid rgba(0,36,76,.1); }
+.findus h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); margin-top: 10px; }
+@media (max-width: 980px) { .findus .grid { grid-template-columns: 1fr; gap: 32px; } }
