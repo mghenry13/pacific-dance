@@ -596,33 +596,12 @@ def contact_page():
 </section>
 """ + cta_band() + FOOTER
 
-# ============================================================ HOMEPAGE (port)
+# ============================================================ HOMEPAGE
+# Canonical homepage source lives in _home_src.html — edit THAT file (or the
+# other page functions above) and rerun build.py. Never read ../homepage.html
+# (it is a redirect stub).
 def homepage():
-    src = open(os.path.join(HERE, '..', 'homepage.html')).read()
-    body = src[src.index('<body>') + 6 : src.index('</body>')]
-    # asset paths one level up now
-    body = body.replace('src="assets/', 'src="../assets/')
-    # wire nav + section links to real pages
-    links = {
-        '<a class="logo" href="#">': '<a class="logo" href="index.html">',
-        'href="#styles"': 'href="classes.html"',
-        'href="#people"': 'href="about.html"',
-        'href="#every"': 'href="performing-groups.html"',
-        'href="#recital"': 'href="recital.html"',
-        'href="#footer"': 'href="contact.html"',
-        'href="#book"': 'href="enroll.html"',
-    }
-    for a, b in links.items():
-        body = body.replace(a, b)
-    # deeper links inside sections
-    body = body.replace('<a class="btn btn-primary" href="#">See the full schedule</a>', '<a class="btn btn-primary" href="classes.html">See the full schedule</a>')
-    body = body.replace('<a class="btn btn-white" href="#">Explore Performing Groups</a>', '<a class="btn btn-white" href="performing-groups.html">Explore Performing Groups</a>')
-    body = body.replace('href="#">Meet all the instructors →</a>', 'href="about.html#instructors">Meet all the instructors →</a>')
-    body = body.replace('<a class="link" href="#">Recital &amp; events →</a>', '<a class="link" href="recital.html">Recital &amp; events →</a>')
-    body = body.replace('href="#" style="color:var(--royal); font-weight:600">read more reviews</a>', 'href="https://www.yelp.com/biz/pacific-dance-irvine" style="color:var(--royal); font-weight:600">read more reviews</a>')
-    body = body.replace('<li><a href="#">Policies &amp; Info</a></li>', '<li><a href="policies.html">Policies &amp; Info</a></li>')
-    return head("Pacific Dance — Dance Classes in Irvine, CA for Ages 2–92",
-                "Watch them fall in love with dance. Opened 1985, family-run since 1994 — the first class is free.") + body + "\n</body>\n</html>"
+    return open(os.path.join(HERE, '_home_src.html')).read()
 
 PAGES = {
     'index.html': homepage,
