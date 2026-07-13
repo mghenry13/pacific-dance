@@ -109,12 +109,19 @@
     <details class="acc"><summary>When can we start?</summary><div class="inner"><p>Anytime — classes run year-round and enrollment is always open. Book the free class and you're in this week.</p></div></details>
   </div>
 </section>
-<section class="block dark finale">
-  <div class="wrap">
-    <h2>Questions before you book?</h2>
-    <p>Call or email — a real person answers, and it's usually Lori.</p>
-    <a class="btn" style="background:var(--sky); color:var(--navy)" href="enroll.html">Book a Free Class</a>
-    <small>Takes about a minute · Lori, our co-owner, replies within two days</small>
+<section class="block dark">
+  <div class="wrap" style="max-width:620px; text-align:center">
+    <div class="eyebrow">Questions first?</div>
+    <h2 style="font-size:clamp(1.8rem,4vw,2.4rem); margin-top:10px">Not ready to book? Just ask.</h2>
+    <p style="margin-top:12px; color:rgba(255,255,255,.82)">Send a note and a real person answers — usually Lori. Or call <a href="tel:+17147311108" style="color:var(--sky); font-weight:600">714.731.1108</a>.</p>
+    <div class="formcard" style="text-align:left; margin-top:30px">
+      <form onsubmit="event.preventDefault(); this.innerHTML='<p style=\'text-align:center; padding:30px 0; font-weight:600\'>Thanks — we\'ll get back to you shortly!</p>';">
+        <label>Your name</label><input required>
+        <label>Email</label><input type="email" required>
+        <label>Your question</label><textarea rows="4" required placeholder="Ask us anything — schedules, ages, what to wear…"></textarea>
+        <button class="btn btn-primary" type="submit">Send message</button>
+      </form>
+    </div>
   </div>
 </section>
 <footer id="footer">

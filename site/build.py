@@ -116,12 +116,12 @@ def page_hero(eyebrow, h1, sub="", bg=None, bg_alt=""):
 </section>
 """
 
-def cta_band(h="The first class is free.", p="Tell us a little about your dancer and Lori will help you find the perfect class — no commitment, no card."):
+def cta_band(h="The first class is free.", p="Tell us a little about your dancer and Lori will help you find the perfect class — no commitment, no card.", href="enroll.html"):
     return f"""<section class="block dark finale">
   <div class="wrap">
     <h2>{h}</h2>
     <p>{p}</p>
-    <a class="btn" style="background:var(--sky); color:var(--navy)" href="enroll.html">{CTA}</a>
+    <a class="btn" style="background:var(--sky); color:var(--navy)" href="{href}">{CTA}</a>
     <small>Takes about a minute · Lori, our co-owner, replies within two days</small>
   </div>
 </section>
@@ -341,7 +341,22 @@ def enroll_page():
     <details class="acc"><summary>When can we start?</summary><div class="inner"><p>Anytime — classes run year-round and enrollment is always open. Book the free class and you're in this week.</p></div></details>
   </div>
 </section>
-""" + cta_band("Questions before you book?", "Call or email — a real person answers, and it's usually Lori.") + FOOTER
+""" + """<section class="block dark">
+  <div class="wrap" style="max-width:620px; text-align:center">
+    <div class="eyebrow">Questions first?</div>
+    <h2 style="font-size:clamp(1.8rem,4vw,2.4rem); margin-top:10px">Not ready to book? Just ask.</h2>
+    <p style="margin-top:12px; color:rgba(255,255,255,.82)">Send a note and a real person answers — usually Lori. Or call <a href="tel:+17147311108" style="color:var(--sky); font-weight:600">714.731.1108</a>.</p>
+    <div class="formcard" style="text-align:left; margin-top:30px">
+      <form onsubmit="event.preventDefault(); this.innerHTML='<p style=\\'text-align:center; padding:30px 0; font-weight:600\\'>Thanks — we\\'ll get back to you shortly!</p>';">
+        <label>Your name</label><input required>
+        <label>Email</label><input type="email" required>
+        <label>Your question</label><textarea rows="4" required placeholder="Ask us anything — schedules, ages, what to wear…"></textarea>
+        <button class="btn btn-primary" type="submit">Send message</button>
+      </form>
+    </div>
+  </div>
+</section>
+""" + FOOTER
 
 # ============================================================ ABOUT
 def about_page():
@@ -792,7 +807,7 @@ def landing_page():
     </div>
   </div>
 </section>
-""" + cta_band("Ready when you are.", "One-minute form, free first class, and Lori takes it from there.") + FOOTER
+""" + cta_band("Ready when you are.", "One-minute form, free first class, and Lori takes it from there.", href="#bookform") + FOOTER
 
 # ============================================================ THANK YOU
 def thankyou_page():
