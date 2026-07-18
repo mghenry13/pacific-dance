@@ -121,8 +121,8 @@ section.block { padding: 92px 0; }
 .lori-note p { margin: 0; font-size: .92rem; }
 .lori-note b { display: block; font-size: .8rem; text-transform: uppercase; letter-spacing: .08em; color: var(--royal); margin-bottom: 3px; }
 .faces { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
-.face { border-radius: 0; }
-.face img { width: 100%; aspect-ratio: 4/4.3; object-fit: cover; object-position: 50% 25%; border-radius: var(--radius); }
+.face .imgwrap { border-radius: var(--radius); overflow: hidden; background: var(--mist); }
+.face img { width: 100%; aspect-ratio: 4/4.3; object-fit: cover; object-position: 50% 25%; display: block; }
 .face span { display: block; color: var(--navy); font-size: .82rem; font-weight: 600; padding-top: 7px; }
 
 /* ============================ facility strip ============================ */
