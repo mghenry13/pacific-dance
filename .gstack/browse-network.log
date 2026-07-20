@@ -144,3 +144,5 @@
 [2026-07-18T04:45:24.674Z] GET https://maps.googleapis.com/maps/api/js/StaticMapService.GetMapImage?1m2&1i2900433&2i6717932&2e1&3u16&4m2&1u317&2u420&5m6&1e0&5sen-US&6sus&10b1&12b1&14i47083502&8e1&key=AIzaSyCmL18misQw9KdwqGaw3zHkitj8vG6QF2Y&token=123824 → 200 (93ms, ?B)
 [2026-07-18T04:45:24.675Z] GET https://maps.googleapis.com/maps-api-v3/api/js/65/6a/onion.js → 200 (?ms, -840B)
 [2026-07-18T04:45:24.675Z] GET https://maps.googleapis.com/maps-api-v3/api/js/65/6a/search_impl.js → 200 (?ms, -840B)
+[2026-07-18T04:45:26.003Z] GET https://fonts.googleapis.com/css?family=Google+Sans+Text:400&text=%E2%86%90%E2%86%92%E2%86%91%E2%86%93&lang=en → 200 (?ms, -743B)
+[2026-07-18T04:45:26.004Z] GET https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Google+Sans:400,500,700|Google+Sans+Text:400,500,700&lang=en → 200 (?ms, -743B)
