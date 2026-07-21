@@ -269,7 +269,9 @@ def enroll_page():
         bg="../assets/img/ba-studio-after.jpg", bg_alt="Inside one of Pacific Dance's ten studios",
     ) + """
 <section class="block" style="padding-bottom:0">
-  <div class="wrap" style="max-width:760px">""" + personal_help() + """</div>
+  <div class="wrap" style="max-width:760px">""" + personal_help() + """
+    <p style="text-align:center; margin-top:16px; font-size:.92rem; color:var(--slate)">Already know you want to enroll? <a href="how-to-enroll.html" style="color:var(--royal); font-weight:600">Skip straight to registration &amp; the waiver &rarr;</a></p>
+  </div>
 </section>
 """ + f"""
 <section class="block">
@@ -945,7 +947,7 @@ def how_to_enroll_page():
     return head("How to Enroll — Pacific Dance, Irvine", "Register at Pacific Dance in Irvine — complete the registration form and waiver to enroll your dancer.") + nav("enroll.html") + page_hero(
         "How to Enroll",
         "Ready to make it official?",
-        "Tried a class and found the right fit? Complete your registration below and your dancer is in. We're happy to help you through it — this should take about five minutes.",
+        "Whether you've tried a free class or you already know you're ready — this is where you register your dancer. It takes about five minutes, and we're glad to help you through it.",
         bg="../assets/img/ba-studio-after.jpg", bg_alt="Inside a Pacific Dance studio",
     ) + f"""
 <section class="block">
