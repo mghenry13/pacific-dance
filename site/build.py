@@ -947,7 +947,7 @@ def how_to_enroll_page():
       <div class="step"><span class="stepn">3</span><h4>Set up autopay &amp; dance</h4><p>We'll set up monthly Auto Pay together and get your dancer on the schedule. We accept students year-round.</p></div>
     </div>
 
-    """ + personal_help() + """
+    """ + personal_help() + f"""
 
     <div class="formcard" id="registration" style="margin-top:30px">
       <h3 style="font-size:1.5rem">Registration Form</h3>
