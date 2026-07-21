@@ -463,6 +463,13 @@ def pg_page():
         "Serious training, with heart.",
         "Our audition-based Performing Groups compete across Southern California — and win a lot. But the focus is never on winning: it's kids doing their best, together.",
     ) + f"""
+<section class="block" style="padding-bottom:0">
+  <div class="wrap">
+    <img src="../assets/img/silk-blue.jpg" alt="A Pacific Dance performing group" style="width:100%; max-height:460px; object-fit:cover; border-radius:var(--radius)">
+    <div class="sample-note" style="margin-top:12px"><b>Mock note:</b> placeholder image — swap in a photo of your current Performing Groups here.</div>
+  </div>
+</section>
+
 <section class="block">
   <div class="wrap">
     <div class="head-c">
@@ -471,9 +478,9 @@ def pg_page():
     </div>
     <div class="stygrid">
       <div class="sty"><h3>Mini Mini PG</h3><p>The youngest performers get their first taste of the team — and the stage.</p><span class="age">Youngest dancers</span></div>
-      <div class="sty"><h3>Hip Hop &amp; Tap PGs</h3><p>Style-specific crews for dancers who've found their lane.</p><span class="age">By audition</span></div>
-      <div class="sty"><h3>Mini Ballet PG</h3><p>Classical foundations, performance polish.</p><span class="age">Ages 6 &amp; up</span></div>
-      <div class="sty"><h3>PD Elite</h3><p>Our pre-professional company — the most committed track we offer.</p><span class="age">Advanced</span></div>
+      <div class="sty"><h3>Mini Dance PG</h3><p>Dance foundations, performance polish.</p><span class="age">Ages 6 &amp; up</span></div>
+      <div class="sty"><h3>Hip Hop &amp; Tap PGs</h3><p>Style-specific crews for dancers who've found their lane.</p><span class="age">All ages</span></div>
+      <div class="sty"><h3>PD Elite</h3><p>Our pre-professional company and most committed track — home to our newest competitors through our most advanced dancers.</p></div>
     </div>
     <div class="twocol" style="margin-top:44px">
       <div class="card-p">
@@ -520,8 +527,7 @@ def recital_page():
     <div>
       <div class="eyebrow">Annual recital</div>
       <h2 style="font-size:2.1rem; margin-top:10px">Recital 2027 · June 7–11</h2>
-      <p style="margin-top:16px; color:#24405e">A professional theater, real costumes, four full shows — and a moment on stage for every single dancer. Participation is optional but beloved: good class attendance, the assigned costume, and the scheduled rehearsals are all it takes.</p>
-      <p style="margin-top:12px; color:#24405e">Closer to the date, this page carries everything families need: the director's welcome, show programs, ticket info, and our stage makeup &amp; hair bun demo video.</p>
+      <p style="margin-top:16px; color:#24405e">A professional theater, real costumes, and a moment on stage for every single dancer — it's a lot of fun, and the highlight of the year. Participation is optional but beloved: good class attendance, the assigned costume, and the scheduled rehearsals are all it takes to have a great experience.</p>
       <div class="sample-note" style="margin-top:18px"><b>Swappable by design:</b> this section updates each season (2026 → 2027 → …) without rebuilding the page — same for the program, senior shout-outs, and schedules.</div>
     </div>
     <img src="../assets/img/scorpion-black.jpg" alt="A Pacific Dance student performing on stage" style="border-radius:10px">
@@ -529,12 +535,23 @@ def recital_page():
 </section>
 
 <section class="block mist-bg">
+  <div class="wrap twocol">
+    <div>
+      <div class="eyebrow">Also this season</div>
+      <h2 style="font-size:2.1rem; margin-top:10px">In-Studio Holiday Performance · December 14, 2026</h2>
+      <p style="margin-top:16px; color:#24405e">A warm in-studio holiday performance for family and friends — the first &ldquo;stage&rdquo; of the year, where every class gets a turn to shine. It's a lot of fun, and it gets dancers excited for recital season ahead.</p>
+    </div>
+    <img src="../assets/img/minis-barre.jpg" alt="Young Pacific Dance students at the barre" style="border-radius:10px">
+  </div>
+</section>
+
+<section class="block">
   <div class="wrap">
     <div class="head-c">
       <div class="eyebrow">Summer 2026</div>
       <h2>Workshops &amp; intensives</h2>
     </div>
-    <div class="threecol">
+    <div class="twocol">
       <div class="card-p">
         <h3>Summer Dance Party · Ages 4–6</h3>
         <ul style="margin-top:10px">
@@ -548,15 +565,7 @@ def recital_page():
         <ul style="margin-top:10px">
           <li>June 22–26 and August 3–7 · 9:00 am – 2:00 pm</li>
           <li>Full days of technique, styles, and performance</li>
-          <li>$350 one week · deposits hold your spot</li>
-        </ul>
-      </div>
-      <div class="card-p">
-        <h3>December Open House</h3>
-        <ul style="margin-top:10px">
-          <li>An in-studio holiday performance for family &amp; friends</li>
-          <li>Every class can take part — a cozy first "stage" of the year</li>
-          <li>Gets dancers excited for recital season ahead</li>
+          <li>$350 one week · $650 both weeks (or two siblings)</li>
         </ul>
       </div>
     </div>
@@ -590,7 +599,7 @@ def policies_page():
     def acc(title, inner, open_=False):
         return f'<details class="acc"{" open" if open_ else ""}><summary>{title}</summary><div class="inner">{inner}</div></details>'
     policies = (
-        acc("Registration", "<p>A registration form and waiver must be completed by a parent or legal guardian before any class. The $35 registration fee applies again if you discontinue for more than a month and return.</p>", True)
+        acc("Registration", "<p>A registration form and waiver must be completed by a parent or legal guardian before any class is taken. The $35 registration fee applies again if you discontinue for more than a month and return.</p><p style=\"margin-top:10px\"><a href=\"how-to-enroll.html\" style=\"color:var(--royal); font-weight:600\">Complete the registration form &rarr;</a></p>", True)
         + acc("Tuition & Auto Pay", "<ul><li>Tuition is monthly, regardless of weeks or holidays in the month.</li><li>All tuition runs on Auto Pay — charged on or about the 1st. Declines must be resolved by the 7th to avoid a $35 late fee.</li><li>No credits or refunds for absences, tuition, costumes, competition, workshop, or convention fees.</li><li>Dropping a class? Email by the 20th of the prior month, or the next month's tuition applies.</li></ul>")
         + acc("Absences & make-ups", "<p>Request a courtesy make-up in a comparable class within one month of the absence, at least 48 hours ahead, via the make-up form. Make-ups are non-transferable, end when you drop all classes, and aren't guaranteed for every schedule, age, or level. 90-minute classes use two make-ups unless you're enrolled in one.</p>")
         + acc("Recital participation", "<p>The annual recital is optional. Participating dancers need good attendance, the assigned costume, tights and shoes, and the mandatory rehearsals and shows. Accounts must be paid in full before dress rehearsal.</p>")
@@ -613,7 +622,8 @@ def policies_page():
   <div class="wrap twocol">
     <div>
       <div class="eyebrow">School policies</div>
-      <h2 style="font-size:1.9rem; margin:10px 0 20px">Policies</h2>
+      <h2 style="font-size:1.9rem; margin:10px 0 6px">Policies</h2>
+      <p style="margin:0 0 20px; font-size:.9rem; color:var(--slate)">Quick summaries below — the complete, current policies are part of the <a href="how-to-enroll.html" style="color:var(--royal); font-weight:600">registration form</a>.</p>
       {policies}
     </div>
     <div>
